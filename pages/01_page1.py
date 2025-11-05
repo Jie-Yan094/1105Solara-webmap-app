@@ -2,7 +2,6 @@ import solara
 import leafmap.maplibregl as leafmap
 
 def create_map():
-
     m = leafmap.Map(
         center=[121.55555, 25.08722],
         zoom=16,
@@ -13,7 +12,8 @@ def create_map():
         sidebar_visible=True,
     )
     m.add_basemap("CartoDB.DarkMatter")
-    m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/master/routes.geojson", layer_name="路線")
+    # 💥 將 layer_name 替換為 name 💥
+    m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/master/routes.geojson", name="路線")
 
     return m
 
