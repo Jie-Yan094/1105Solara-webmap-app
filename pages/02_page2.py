@@ -5,7 +5,7 @@ import leafmap.maplibregl as leafmap
 def create_map():
 
     m = leafmap.Map(
-        center=[-74.0095, 40.7046],
+        center=[121.55555, 25.08722],
         zoom=16,
         pitch=60,
         bearing=-17,
