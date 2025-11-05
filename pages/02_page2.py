@@ -13,7 +13,7 @@ def create_map():
         height="750px",
         sidebar_visible=True,
     )
-    m.add_basemap("Satellite", visible=False)
+    m.add_basemap("CartoDB Positron", visible=False)
     m.add_overture_3d_buildings(template="simple")
     return m
 
