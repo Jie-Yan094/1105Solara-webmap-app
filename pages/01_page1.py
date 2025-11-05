@@ -13,7 +13,7 @@ def create_map():
         sidebar_visible=True,
     )
     m.add_basemap("CartoDB.DarkMatter")
-    m.add_geojson("https://bdon.github.io/taipei_mrt/", layer_name="w")
+    m.add_geojson("https://github.com/leoluyi/taipei_mrt/blob/master/routes.geojson", layer_name="w")
 
     return m
 
