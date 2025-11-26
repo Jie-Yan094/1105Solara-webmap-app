@@ -14,7 +14,7 @@ def create_map():
     m.add_basemap("CartoDB.DarkMatter")
     # 💥 將 layer_name 替換為 name 💥
     m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/master/routes.geojson", name="路線")
-
+    m.add_geojson("https://raw.githubusercontent.com/leoluyi/taipei_mrt/refs/heads/master/stations.geojson", name="車站")
     return m
 
 @solara.component
