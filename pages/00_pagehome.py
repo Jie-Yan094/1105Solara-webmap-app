@@ -10,7 +10,7 @@ def Page():
         """
         solara.Markdown(markdown)
 
-    repo_url = "https://raw.githubusercontent.com/Jie-Yan094/final_Penghu_coralreef/main/penghuDTM.csv"
+    repo_url = "https://raw.githubusercontent.com/Jie-Yan094/1105Solara-webmap-app/main/taipei.jpg"
     solara.Markdown("## 台北行政圖")
     
     # 使用 solara.Row 建立並排佈局，並設定間距和響應式換行
