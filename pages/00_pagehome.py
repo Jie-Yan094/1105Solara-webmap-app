@@ -20,18 +20,13 @@ def Page():
         with solara.Div(style={
             "flex": "1 1 48%",
             "min-width": "300px",
-            # "max-height": "400px",  <-- 建議先註解掉這行，避免截斷圖片
             "overflow": "hidden",
             "border-radius": "8px",
             "box-shadow": "0 4px 12px rgba(0, 0, 0, 0.1)",
-            "text-align": "center", # <-- 【新增】讓裡面的圖片水平置中
-            "padding": "20px",      # <-- 【新增】增加一點留白看起來比較舒服
-            "background-color": "#f0f0f0" # <-- 【可選】加個背景色看看區塊範圍
+            "text-align": "center", # 讓圖片在格子裡置中
+            "padding": "20px",
+            "background-color": "#f8f9fa"
         }):
-            # ✅ 修改 Image 元件：
-            # 1. 移除 width="100%" (關鍵！不要強制拉滿)
-            # 2. 改用 style 控制，確保它不會超出邊界，但保持原始比例
-            solara.Image(
-                image_url, 
-                style={"max-width": "100%", "height": "auto", "box-shadow": "none"}
-            )
+            # ✅ 修正：移除 width="100%"，也移除不支援的 style
+            # 這樣圖片就會以「原始大小」顯示，不會被硬拉大變糊
+            solara.Image(image_url)
